@@ -1,13 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
-import Welcome from "./components/Welcome"
-import Game from "./components/Game"
-import React from "react"
-
-function App() {
-
-  const[start, setStart] = React.useState(false)
-  const[questions, setQuestions]= React.useState([
+[
     {
         "category": "Celebrities",
         "type": "multiple",
@@ -62,34 +53,4 @@ function App() {
             "False"
         ]
     }
-])
-
-  console.log(questions)
-  // Turn this back on When you are done editing the styling 
-  // React.useEffect(()=>{
-  //   fetch("https://opentdb.com/api.php?amount=5")
-  //   .then(res => res.json())
-  //   .then(data => setQuestions(data.results) )
-    
-  // },[start])
-
-// function startGame(){
-//     setStart(true)
-// }
-
-
-  return (
-    <div className="App">
-       <div className= "blob"></div>
-        <div className= "blob2"></div>
-        {/* {!start ? <Welcome start = {startGame} /> : <Game questions = {questions}  />} */}
-      <Game questions = {questions}/>
-
-    </div>
-  )
-    
-
-
-}
-
-export default App;
+]
